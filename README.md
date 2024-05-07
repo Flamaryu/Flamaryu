@@ -15,5 +15,5 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 Hello my name is Markevis Williams (Flamaryu).
-I'm a new software developer that is going through the Teck Elevator bootcamp.
-I already have a few projects completed so check them out when you get a change. I just finished a triva app buitl in flutter.
+I'm a new software developer that is going through the Tech Elevator bootcamp.
+I already have a few projects completed so check them out when you get a chance. I just finished a triva app built in flutter.
