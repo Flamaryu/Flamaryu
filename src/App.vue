@@ -1,16 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HomeView msg="Aspiring Software Developer"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import HomeView from './components/HomeView.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+   HomeView
   }
+
 }
 </script>
 
@@ -21,6 +22,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background: linear-gradient(to right, #ff7f50, #1e90ff); /* Orange to Blue gradient */
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
-</style>
+</style>./components/HomeView.vue
