@@ -68,7 +68,7 @@ h2, h3 {
 }
 
 span {
-  color: #ABE188;
+  color: #399E5A;
 }
 
 .skills-row {

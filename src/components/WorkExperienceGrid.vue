@@ -1,44 +1,37 @@
 <template>
-    <div class="grid">
-      <WorkExperience
-        v-for="(experience, index) in workExperience"
-        :key="index"
-        :experience="experience"
-      />
-    </div>
-  </template>
-  
-  <script>
-  import { mapGetters } from 'vuex';
-  import WorkExperience from './WorkExperience.vue';
-  
-  export default {
-    name: 'WorkExperienceGrid',
-    components: {
-      WorkExperience
-    },
-    computed: {
-      ...mapGetters(['getWorkExperience']),
-      workExperience() {
-        return this.getWorkExperience;
-      }
+  <div class="work-experience-list">
+    <WorkExperience
+      v-for="(experience, index) in workExperiences"
+      :key="index"
+      :experience="experience"
+    />
+  </div>
+</template>
+
+<script>
+import WorkExperience from './WorkExperience.vue';
+import { mapGetters } from 'vuex';
+
+export default {
+  name: 'WorkExperienceList',
+  components: {
+    WorkExperience
+  },
+  computed: {
+    ...mapGetters(['getWorkExperience']),
+    workExperiences() {
+      return this.getWorkExperience;
     }
-  };
-  </script>
-  
-  <style scoped>
-  .grid {
+  }
+};
+</script>
+
+<style scoped>
+.work-experience-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
- /* background: linear-gradient(to left, #ff7f50, #1e90ff); /* Reverse gradient */
-  padding: 5px;
-  border-radius: 8px;
-  border: 2px solid #ccc; /* Add a border */
-  max-width: 80%; /* Ensure grid doesn't touch the edges */
-  font-size: small;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
 }
-
-
-  </style>
-  
+</style>
