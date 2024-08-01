@@ -1,5 +1,11 @@
-// store/index.js
 import { createStore } from 'vuex';
+import Agile from  '@/assets/agile.png';
+import Diagram from '@/assets/erd.png';
+import IntelliJ from '@/assets/intellij-idea.svg';
+import JUnit from '@/assets/JUnit.png';
+import Testing from '@/assets/integration.png';
+import Table from '@/assets/relational.png';
+import jdbc from '@/assets/jdbc.png';
 
 export default createStore({
   state: {
@@ -65,50 +71,75 @@ export default createStore({
       {
         name: "Programming Languages",
         skills: [
-          { name: "Java", icon: "mdi-language-java" },
-          { name: "C#", icon: "mdi-language-csharp" },
-          { name: "Kotlin", icon: "mdi-language-kotlin" },
-          { name: "Swift/SwiftUI", icon: "mdi-apple" },
-          { name: "Flutter", icon: "mdi-language-dart" },
-          { name: "HTML", icon: "mdi-language-html5" },
-          { name: "CSS", icon: "mdi-language-css3" },
-          { name: "JavaScript", icon: "mdi-language-javascript" },
+          { name: "Java", icon: "java" },
+          { name: "C#", icon: "cs" },
+          { name: "Kotlin", icon: "kotlin" },
+          { name: "Swift/SwiftUI", icon: "swift" },
+          { name: "Flutter", icon: "flutter" },
+          { name: "HTML", icon: "html" },
+          { name: "CSS", icon: "css" },
+          { name: "JavaScript", icon: "js" },
         ],
       },
       {
         name: "Frameworks & Libraries",
         skills: [
-          { name: "Spring Boot", icon: "mdi-spring" },
-          { name: "Vue.js", icon: "mdi-vuejs" },
+          { name: "Spring Boot", icon: "spring" },
+          { name: "Vue.js", icon: "vue" },
         ],
       },
       {
         name: "Tools & Technologies",
         skills: [
-          { name: "JDBC", icon: "mdi-database" },
-          { name: "Table Design", icon: "mdi-table" },
-          { name: "SQL", icon: "mdi-database" },
-          { name: "PostgreSQL", icon: "mdi-database" },
-          { name: "E/R Diagrams", icon: "mdi-chart-areaspline" },
-          { name: "Git", icon: "mdi-git" },
-          { name: "IntelliJ", icon: "mdi-jetbrains" },
+          { name: "JDBC", icon: "JDBC" },
+          { name: "Table Design", icon: "Table Design" },
+          { name: "NPM", icon: "npm" },
+          { name: "PostgreSQL", icon: "postgres" },
+          { name: "E/R Diagrams", icon: "E/R Diagrams" },
+          { name: "Git", icon: "git" },
+          { name: "IntelliJ", icon: 'IntelliJ' },
         ],
       },
       {
         name: "Development Practices",
         skills: [
-          { name: "Agile", icon: "mdi-agile" },
-          { name: "Unit Testing (JUnit)", icon: "mdi-test-tube" },
-          { name: "Integration Testing", icon: "mdi-test-tube" },
+          { name: "Agile", icon: "Agile" },
+          { name: "Unit Testing (JUnit)", icon: "Unit Testing (JUnit)" },
+          { name: "Integration Testing", icon: "Integration Testing" },
         ],
       },
-    ]
+    ],
+    skillIcons: {},
+    localSkillIcons: {
+      'Agile': Agile,
+      'E/R Diagrams': Diagram,
+      'IntelliJ': IntelliJ,
+      'Unit Testing (JUnit)': JUnit,
+      'Integration Testing': Testing,
+      "Table Design": Table,
+      "JDBC": jdbc
+    }
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    SET_SKILL_ICON(state, { id, url }) {
+      state.skillIcons[id] = url;
+    }
+  },
+  actions: {
+    fetchSkillIcon({ state, commit }, id) {
+      const localIcon = state.localSkillIcons[id];
+      if (localIcon) {
+        commit('SET_SKILL_ICON', { id, url: localIcon });
+      } else {
+        const url = `https://skillicons.dev/icons?i=${id}`;
+        commit('SET_SKILL_ICON', { id, url });
+      }
+    }
+  },
   getters: {
     getWorkExperience: state => state.workExperience,
     getProjects: state => state.projects,
-    getSkills: state => state.skills
+    getSkills: state => state.skills,
+    getSkillIcon: (state) => (id) => state.skillIcons[id]
   }
 });

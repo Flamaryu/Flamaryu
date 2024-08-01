@@ -22,14 +22,19 @@
   
   <style scoped>
   .work-experience {
-    color: white;
+    color: #ABE188;
     padding: 5px;
     margin: 8px;
   }
 
+  h2, p{
+    color: white;
+    
+  }
+
   li{
     text-align: left;
-    font-size: small;
+    font-size: medium;
   }
   </style>
   

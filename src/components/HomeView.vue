@@ -5,9 +5,8 @@
       <h3>{{ msg }}</h3>
       <img :src="mypic" alt="Profile Picture" class="profile-pic" />
       <div class="container">
-        <h4>Work History</h4>
+        <h3>Work History</h3>
         <WorkExperienceGrid/>
-        <h4>Skills</h4>
         <SkillsGrid  />
         <h4>Projects</h4>
         <ProjectCarousel />
@@ -41,7 +40,9 @@ export default {
       type: String,
       required: true
     }
-  }
+  },
+  
+ 
 };
 </script>
 
@@ -88,4 +89,4 @@ h3{
   border: 2px solid #fff; /* Optional: Add a white border */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
 }
-</style>
+</style>@/services/getIconsService
