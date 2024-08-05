@@ -11,6 +11,15 @@ export default createStore({
   state: {
     workExperience: [
       {
+        company: 'Tech Elebvator',
+        position: 'Java Full Stack Student',
+        location : 'Wilmington, DE',
+        duration: 'May 2024 - present',
+        responsibilities: [
+          "I completed a comprehensive full-stack bootcamp with over 800 hours of education and hands-on application, focused on designing software systems and solutions. My training covered Object-Oriented Programming with Java, Web Application Development using HTML, CSS, JavaScript, Spring Boot, and Vue.js, and Database Programming with JDBC, table design, SQL, PostgreSQL, and E/R diagrams. Additionally, I gained expertise in development tools and techniques such as Agile methodologies, unit testing (JUnit), integration testing, Git, and IntelliJ."
+        ]
+      },
+      {
         company: "Capital One",
         position: "Customer Service Specialist",
         location: "Wilmington, DE",
@@ -44,8 +53,9 @@ export default createStore({
           "Maintained detailed records of customer interactions & transactions, logging inquiries & complaints to swiftly resolve issues within 24 hours, ultimately boosting customer satisfaction scores.",
           "Advanced from a virtual teller role within the initial 6 months, demonstrating increased responsibilities fueled by exceptional customer service & strong problem-solving abilities."
         ]
-      }
-    ],
+      },
+     
+    ],   
     projects: [
       {
         photos: [
