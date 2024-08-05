@@ -49,21 +49,31 @@ export default createStore({
     projects: [
       {
         photos: [
-          require('@/assets/logo.png'),
-          require('@/assets/rack-of-ram.png'),
-          require('@/assets/star.png')
+          require('@/assets/balogin.png'),
+          require('@/assets/bahome.png'),
+          require('@/assets/bahome1.png'),
+          require('@/assets/bahome3.png'),
+          require('@/assets/bahome4.png'),
+          require('@/assets/baed.png'),
+          require('@/assets/baAlert.png'),
+          require('@/assets/ba1.png'),
+          require('@/assets/bame.png'),
+          require('@/assets/basetting.png')
+          
         ],
-        description: 'Project 1 Description',
-        githubLink: 'https://github.com/user/project1'
+        description: "BeAround is a dynamic iOS app designed to bring people together through events. Users can easily add new events, attend events, and let hosts see how many people are coming. Each event features its own chatroom for real-time communication. Events can be searched by location or type, and once a user selects an event to attend, they can add it to their phone's calendar. Powered by Firebase for the backend, BeAround ensures a seamless and interactive event experience",
+        githubLink: 'https://github.com/Flamaryu/BeAround'
       },
       {
         photos: [
-          require('@/assets/logo.png'),
-          require('@/assets/rack-of-ram.png'),
-          require('@/assets/star.png')
+          require('@/assets/homepage.png'),
+          require('@/assets/quiz4.png'),
+          require('@/assets/quiz1.png'),
+          require('@/assets/quiz2.png'),
+          require('@/assets/quiz3.png')
         ],
-        description: 'Project 2 Description',
-        githubLink: 'https://github.com/user/project2'
+        description: "So You Know Somethings is an engaging trivia app built with Flutter, designed to provide users with an interactive and fun quiz experience. The app leverages a RESTful API to load trivia questions tailored to the user's chosen categories and preferences. With So You Know Somethings, users can test their knowledge across various topics, enjoy a seamless user experience, and continually challenge themselves with fresh and interesting questions.",
+        githubLink: 'https://github.com/Flamaryu/QuizApp_Flutter'
       },
       // Add more projects here
     ],

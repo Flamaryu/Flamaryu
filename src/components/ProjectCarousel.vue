@@ -50,7 +50,13 @@
   };
   </script>
   
+  
   <style scoped>
+  p {
+  text-align: left;
+  display: inline-block;
+  font-size: medium;
+}
   .carousel {
     position: relative;
     display: flex;
@@ -65,10 +71,11 @@
   }
   
   img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+  width: 100%;
+  height: 350px;
+  object-fit: fit;
+  border-radius: 8px;
+}
   
   .arrow {
     position: absolute;
@@ -98,6 +105,13 @@
   .carousel-description {
     text-align: center;
     margin-top: 10px;
+    background-color: #364652;
+  color: #ABE188;
+  padding: 16px;
+  margin: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
   }
   
   .carousel-description p {
