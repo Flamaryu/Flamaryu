@@ -48,6 +48,6 @@ h2, p {
 li {
   display: block;
   text-align: left;
-  font-size: small;
+  font-size: meduim;
 }
 </style>
